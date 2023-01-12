@@ -1,5 +1,4 @@
 require 'CSV'
-require 'CSV'
 
 class SalesEngine
   attr_reader :items, :merchants
@@ -30,5 +29,13 @@ class SalesEngine
       item_collection << Item.new(items_params)
     end
     SalesEngine.new(item_collection, merchant_collection)
+  end
+
+  def merchant_collection(merchants)
+    MerchantCollection.new(merchants)
+  end
+
+  def item_collection(items)
+    ItemCollection.new(items)
   end
 end
