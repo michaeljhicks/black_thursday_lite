@@ -4,7 +4,7 @@ require "./lib/merchant_collection"
 
 #You may need to add more `expect` lines to each test to make it more robust...!
 RSpec.describe SalesEngine do
-  xit "exists" do
+  it "exists" do
     sales_engine = SalesEngine.from_csv({
       :items => "./data/items.csv",
       :merchants => "./data/merchants.csv"
